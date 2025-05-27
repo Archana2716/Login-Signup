@@ -1,0 +1,271 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Common Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Shared Container (Split-screen or Login Box) */
+.container {
+  display: flex;
+  width: 90%;
+  height: 90vh;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* LOGIN-SPECIFIC CONTAINER */
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Login & Signup Headings/Text */
+h2 {
+  font-size: 24px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+p {
+  color: black;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #0fcaa7f0;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Login Form */
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.login-container label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: black;
+  text-align: left;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border 0.3s;
+  width: 100%;
+}
+
+.login-container input:focus {
+  border-color: #0fcaa7f0;
+}
+
+.login-container button {
+  padding: 12px;
+  background-color: #0fcaa7f0;
+  color: black;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.login-container button:hover {
+  background-color: #1fd0a9;
+}
+
+.footer {
+  margin-top: 20px;
+  color: black;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #0fcaa7f0;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Left Panel (Split) */
+.left-section {
+  width: 45%;
+  background-color: #0fcaa7f0;
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 2px 0 4px rgb(14, 13, 13);
+}
+
+.left-section h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.left-section p {
+  margin-bottom: 28px;
+  color: white;
+}
+
+.left-section button {
+  padding: 12px 30px;
+  background-color: #fff;
+  color: #0fcaa7f0;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.left-section button:hover {
+  background-color: #e6fffb;
+}
+
+/* Right Panel (Signup) */
+.right-section {
+  width: 55%;
+  background-color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  box-shadow: -4px 0 10px rgb(216, 208, 208);
+}
+
+.right-section h2 {
+  font-size: 32px;
+  color: #0fcaa7f0;
+  margin-bottom: 10px;
+}
+
+.right-section form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-section form input {
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 70%;
+  font-size: 14px;
+}
+
+.right-section form button {
+  padding: 12px;
+  background-color: #0fcaa7f0;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 50%;
+  margin-top: 10px;
+}
+
+.right-section form button:hover {
+  background-color: #1fd0a9;
+}
+
+/* Social Media Icons */
+.social-icons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.social-icon {
+  font-size: 18px;
+  color: #0fcaa7f0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icon:hover {
+  background-color: #0fcaa7f0;
+  color: white;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-section, .right-section {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .right-section form input {
+    width: 90%;
+  }
+
+  .right-section form button {
+    width: 70%;
+  }
+
+  .social-icons {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .login-container {
+    width: 90%;
+    padding: 30px;
+  }
+}
